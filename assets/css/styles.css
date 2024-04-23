@@ -1,0 +1,134 @@
+.nav-link {
+  color: #471b9a;
+  font-size: large;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: #ed5c1f;
+  text-shadow: 2px 2px 4px #992376;
+}
+
+.logoimage,
+.logoimage1 {
+  height: 80px;
+  width: auto;
+  transition: transform 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .logoimage,
+  .logoimage1 {
+    height: 120px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logoimage,
+  .logoimage1 {
+    height: 110px;
+  }
+  .central-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 1200px) {
+  .logoimage,
+  .logoimage1 {
+    height: 150px;
+  }
+}
+
+.logoimage:hover,
+.logoimage1:hover {
+  transform: scale(1.2);
+}
+
+.navbar {
+  min-height: 10vh;
+}
+
+.navbar-toggler {
+  border-color: #c74d18;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.card {
+  background-color: #471b9a;
+  border: 4px solid #ed5c1f;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: #f7862d;
+}
+
+.card-text {
+  color: #a5a3a3;
+}
+
+.btn-custom {
+  background-color: #ff7f11;
+  color: #471b9a;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #d86b06;
+  color: #3a0d82;
+}
+
+body {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(../imgs/banner-fondo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.padding-for-navbar {
+  padding-top: 150px;
+}
+
+.navbar-custom {
+  background: linear-gradient(to bottom, #ff7f11 0%, #471b9a 100%);
+}
+
+@keyframes logoEntrance {
+  from {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 1;
+  }
+  to {
+    position: fixed;
+    top: var(--final-top-position, -52px);
+    left: var(--final-left-position, 50%);
+    transform: translate(-50%, 0px) scale(1);
+    opacity: 1;
+  }
+}
+.welcome-animation .central-logo {
+  --final-top-position: 0px;
+  --final-left-position: 50%;
+  animation: logoEntrance 2s ease forwards;
+}
+.logoimage1 {
+  margin-top: 50px;
+}
